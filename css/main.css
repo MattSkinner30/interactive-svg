@@ -20,43 +20,58 @@ html {
 	animation: eye-slide 2s linear infinite;
 }
 
+#left-ear, #right-ear {
+	animation: ear-start .5s linear 1;
+}
+
 .bear:hover #left-ear {
-	animation: ear-slide 2s linear 1;
+	animation: ear-slide .5s linear 1;
 }
 
 .bear:hover #right-ear {
-	animation: ear-slide 2s linear 1;
+	animation: ear-slide .5s linear 1;
 }
 
 
 @keyframes eye-slide {
 	0% {
-		transform: translate(0px, 0px);
+		transform: translateX(0px);
 	}
 
 	25% {
-		transform: translate(8px, 0px);
+		transform: translateX(8px);
 	}
 
 	50% {
-		transform: translate(0px, 0px);
+		transform: translateX(0px);
 	}
 
 	75% {
-		transform: translate(-8px, 0px);
+		transform: translateX(-8px);
 	}
 
 	100% {
-		transform: translate(0px, 0px);
+		transform: translateX(0px);
 	}
 }
 
 @keyframes ear-slide {
 	from {
-		transform: translate(0px, 0px);
+		transform: translateY(0px);
 	}
 
 	to {
-		transform: translate(0px, -25px);
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes ear-start {
+
+	to {
+		transform: translateY(0px);
+	}
+
+	from {
+		transform: translateY(-10px);
 	}
 }
