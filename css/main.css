@@ -16,21 +16,47 @@ html {
   box-sizing: inherit;
 }
 
-.bear:hover #left-eye{
-	animation: left-eye 3s linear infinite;
+#right-eye, #left-eye{
+	animation: eye-slide 2s linear infinite;
+}
+
+.bear:hover #left-ear {
+	animation: ear-slide 2s linear 1;
+}
+
+.bear:hover #right-ear {
+	animation: ear-slide 2s linear 1;
 }
 
 
-@keyframes left-eye {
+@keyframes eye-slide {
 	0% {
 		transform: translate(0px, 0px);
 	}
 
+	25% {
+		transform: translate(8px, 0px);
+	}
+
 	50% {
-		transform: translate(50px, 0px);
+		transform: translate(0px, 0px);
+	}
+
+	75% {
+		transform: translate(-8px, 0px);
 	}
 
 	100% {
 		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes ear-slide {
+	from {
+		transform: translate(0px, 0px);
+	}
+
+	to {
+		transform: translate(0px, -25px);
 	}
 }
