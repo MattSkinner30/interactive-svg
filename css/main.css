@@ -15,3 +15,22 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+.bear:hover #left-eye{
+	animation: left-eye 3s linear infinite;
+}
+
+
+@keyframes left-eye {
+	0% {
+		transform: translate(0px, 0px);
+	}
+
+	50% {
+		transform: translate(50px, 0px);
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
